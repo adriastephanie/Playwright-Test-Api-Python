@@ -1,0 +1,3 @@
+[tool.pytest.ini_options]
+addopts = "-v --alluredir=/Users/adriastephanie/Downloads/Playwright-Test-Api-Python/report/allure-results --clean-alluredir"
+filterwarnings = ['ignore::UserWarning']

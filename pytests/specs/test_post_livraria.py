@@ -1,6 +1,4 @@
 import pytest
-
-from pytests.schemas.post_livro_schema import post_schema
 from pytests.support.hooks import *
 from pytests.mocks.livraria_mock import *
 from pytests.clients.post_livraria_client import PostLivrariaClient
@@ -15,7 +13,7 @@ def test_post_livro():
     payload = payload_post_livros()
     ApiUtils.payload_parse(payload)
     response = PostLivrariaClient.post_livros(payload)
-    PostLivrariaClient.validate_response(response, 201)
+    Commom.validate_response(response, 201)
     ApiUtils.validate_schema(response, post_schema)
 
 
@@ -26,7 +24,7 @@ def test_post_livros_invalid_payload(payload, code):
     payload = Commom.incorrect_payload(payload)
     ApiUtils.payload_parse(payload)
     response = PostLivrariaClient.post_livros(payload)
-    PostLivrariaClient.validate_response(response, code)
+    Commom.validate_response(response, code)
 
 @pytest.mark.crud_livros
 @pytest.mark.parametrize("field, value, code", examples_post_livraria_invalid_values)
@@ -35,7 +33,7 @@ def test_post_livros_invalid_values(field, value, code):
     payload = Commom.change_fields_payload(payload, field, value)
     ApiUtils.payload_parse(payload)
     response = PostLivrariaClient.post_livros(payload)
-    PostLivrariaClient.validate_response(response, code)
+    Commom.validate_response(response, code)
 
 
 # removendo os campos para restar indo vazio

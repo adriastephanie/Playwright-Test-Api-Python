@@ -2,6 +2,7 @@ import random
 import string
 from pytests.support.api_utils import ApiUtils
 
+
 class Commom:
 
     @staticmethod
@@ -99,6 +100,9 @@ class Commom:
             del payload[field]
         return payload
 
-
+    @staticmethod
+    def validate_response(response, code):
+        ApiUtils.resquest_parse_log(response)
+        ApiUtils.validate_status_code(response, code)
 
 

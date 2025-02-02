@@ -7,15 +7,17 @@ import json
 class ApiUtils:
     @staticmethod
     def validate_status_code(request, code):
-        try:
-            LOG.log_info(f"Status Code Esperado: {code}")
-            LOG.log_info(f"Status Code Recebido: {request[code]}")
-            assert request[code] == code
-        except Exception as e:
-            LOG.log_error("Erro ao validar status code!")
-            raise e
+        @staticmethod
+        def validate_status_code(request, code):
+            try:
+                LOG.log_info(f"Status code Esperado: {code}")
+                LOG.log_info(f"Status code Recebido: {request['code']}")
+                assert request['code'] == code
+            except Exception as e:
+                LOG.log_error("Erro ao validar status code!")
+                raise e
     @staticmethod
-    def validate_parse_log(request):
+    def resquest_parse_log(request):
         if "{" in request['body']:
             load = json.loads(request['body'])
             resp = json.dumps(load, indent=1, ensure_ascii=False)

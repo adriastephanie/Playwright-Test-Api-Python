@@ -22,6 +22,12 @@ para instalar as dependencias pip install -r requirementes.txt
 
 ## documentação 
 
+Rodar o servidor Allure 
+
+```
+allure serve report/allure-results
+```
+
 ### Common: 
 incorrect_payload: Retorna diferentes tipos de dados de acordo com a entrada.
 

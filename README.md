@@ -50,6 +50,11 @@ Rodar o servidor Allure
 ```
 allure serve report/allure-results
 ```
+## Arquitetura
+
+### Clients
+
+centraliza a lógica de comunicação com a API, permitindo que os testes ou outros módulos do sistema interajam de maneira consistente com diferentes recursos da API sem duplicação de código
 
 ### Common: 
 incorrect_payload: Retorna diferentes tipos de dados de acordo com a entrada.
@@ -61,6 +66,26 @@ change_fields_payload: Modifica um campo no payload, podendo lidar com campos de
 remove_fields_payload: Remove um campo do payload, tratando diferentes profundidades.
 
 validate_response: Valida a resposta de uma requisição, verificando o código de status e registrando informações de log.
+
+### Examples 
+
+Contem vários arquivos que contém exemplos de dados inválidos para diferentes operações relacionadas à livraria. Cada arquivo pode conter uma lista de exemplos com um tipo de entrada inválida e o código de resposta esperado
+
+### Mock 
+
+Usada para armazenar dados simulados
+
+### Schemas 
+
+Usada para armazenar definições de esquemas de dados, como a estrutura de objetos JSON que são esperados nas requisições ou respostas da API
+
+### Specs 
+
+Usada para armazenar os testes
+
+### Suports 
+
+Usada para arquivos de configuracoes e globais
 
 
 ## Obs

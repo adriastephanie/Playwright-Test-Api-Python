@@ -25,7 +25,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Test Api
-        run: pytest -k "crud_livros"
+        run: pytest -m crud_livros
         continue-on-error: true
 
       - name: Publish test results

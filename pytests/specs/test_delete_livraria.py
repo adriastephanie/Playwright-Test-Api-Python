@@ -8,6 +8,7 @@ from pytests.clients.common import Commom
 from pytests.clients.delete_livraria_client import DeleteLivrariaClient
 import json
 
+@pytest.mark.crud_livros
 def test_delete_livro():
     payload = payload_post_livros()
     ApiUtils.payload_parse(payload)

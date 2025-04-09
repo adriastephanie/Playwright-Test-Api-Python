@@ -6,3 +6,4 @@ allure-pytest
 logzero
 jsonschema
 pytest-xdist
+pytest-allure-adaptor

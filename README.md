@@ -22,6 +22,29 @@ para instalar as dependencias pip install -r requirementes.txt
 
 ## documentação 
 
+
+Rodar todos os testes:
+
+```
+pytest 
+```
+Rodar pela linha de comando exemplo:
+
+```
+pytest pytests/specs/test_delete_livraria.py 
+```
+
+Rodar pela linha de comando por tag exemplo:
+
+```
+pytest -m crud_livros
+```
+
+Rodar pela linha de comando com paralelismo:
+```
+pytest -m crud_livros
+```
+
 Rodar o servidor Allure 
 
 ```

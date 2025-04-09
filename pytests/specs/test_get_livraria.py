@@ -19,7 +19,7 @@ def test_get_all_livro():
 # teste funcional passando id
 @pytest.mark.crud_livros
 def test_get_id_livro():
-    response = GetLivrariaClient.get_livros(1869)
+    response = GetLivrariaClient.get_livros(2150)
     Commom.validate_response(response, 200)
     ApiUtils.validate_schema(response, get_schema)
 

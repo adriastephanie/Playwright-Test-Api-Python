@@ -38,3 +38,8 @@ change_fields_payload: Modifica um campo no payload, podendo lidar com campos de
 remove_fields_payload: Remove um campo do payload, tratando diferentes profundidades.
 
 validate_response: Valida a resposta de uma requisição, verificando o código de status e registrando informações de log.
+
+
+## Obs
+
+site para converter em schema: https://www.liquid-technologies.com/online-json-to-schema-converter
